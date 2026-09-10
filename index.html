@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMTC Namma Route Finder</title>
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- Custom App CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div id="topBar">
+    <div class="logo">🚌 BMTC Travillox</div>
+  </div>
+
+  <!-- Search & Route Control Panel -->
+  <div id="searchPanel">
+    <h3>Find Your Bus Route</h3>
+    
+    <label for="fromStop">Boarding Stop (From):</label>
+    <select id="fromStop">
+      <option value="">Select Boarding Stop</option>
+    </select>
+
+    <label for="toStop">Alighting Stop (To):</label>
+    <select id="toStop">
+      <option value="">Select Destination Stop</option>
+    </select>
+
+    <button id="findBusBtn">Search Route</button>
+  </div>
+
+  <!-- Interactive Map -->
+  <div id="map"></div>
+
+  <!-- Results & Info Panel -->
+  <div id="resultsPanel">
+    <h4>Available Buses</h4>
+    <div id="busList">Select stops and click Search to view available buses.</div>
+  </div>
+
+  <!-- Leaflet Map JS Library -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <!-- Data and Application JS -->
+  <script src="bmtcData.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
